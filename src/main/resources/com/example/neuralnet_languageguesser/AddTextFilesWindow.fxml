@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="283.0" prefWidth="484.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.neuralnet_languageguesser.SettingsController">
+   <children>
+      <VBox alignment="CENTER" layoutX="207.0" layoutY="98.0" prefHeight="236.0" prefWidth="381.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Choose language:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <ChoiceBox fx:id="supportedLanguages" prefWidth="150.0" />
+            <HBox alignment="CENTER" prefHeight="109.0" prefWidth="424.0">
+               <children>
+                  <TextArea fx:id="textAreaTrain" prefHeight="110.0" prefWidth="230.0" promptText="Enter TRAINING text here..." wrapText="true" />
+                  <TextArea fx:id="textAreaTest" prefHeight="110.0" prefWidth="230.0" promptText="Enter TESTING text here..." />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="42.0" prefWidth="484.0">
+               <children>
+                  <Button fx:id="addTrainTextFile" mnemonicParsing="false" onMouseClicked="#addTrainTextFile" prefHeight="26.0" prefWidth="230.0" text="Add train file" />
+                  <Button fx:id="addTestTextFile" mnemonicParsing="false" onMouseClicked="#addTestTextFile" prefHeight="26.0" prefWidth="230.0" text="Add test file" />
+               </children>
+            </HBox>
+            <Text fx:id="textInfo" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="439.7366523742676" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
